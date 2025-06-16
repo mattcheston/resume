@@ -1,0 +1,246 @@
+%-------------------------
+% Resume in Latex
+% Author : Matthew Malesky
+% Based on: https://github.com/sb2nov/resume, https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\footnotesize{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \small#2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\LARGE \scshape Matthew Malesky} \\ \vspace{1pt}
+    \small 1945 2nd Avenue, Apt A, San Diego, CA 92101 \\ \vspace{1pt}
+    \small +1 (412) 596-8219 $|$ \href{mailto:me@mattcheston.com}{\underline{me@mattcheston.com}} $|$ 
+    \href{https://linkedin.com/in/mattmalesky}{\underline{linkedin.com/in/mattmalesky}} % $|$
+%    \href{https://github.com/...}{\underline{github.com/jake}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+%\section{Education}
+%  \resumeSubHeadingListStart
+%    \resumeSubheading
+%      {Southwestern University}{Georgetown, TX}
+%      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
+%    \resumeSubheading
+%      {Blinn College}{Bryan, TX}
+%      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+%  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Infrastructure Engineering Lead}{September 2021 -- September 2024}
+      {coalesce.io}{Remote}
+      \resumeItemListStart
+        \resumeItem{Managed a high performance team to lead site reliability, cloud infrastructure, and software CI/CD projects at a seed to Series-B data processing SaaS startup, with over 75 customers, and more than \$4M annual revenue.}
+        \resumeItem{Maintained and deployed coalesce.io software from application code and up, including Terraform, Linux application containers, hosting platform design, CI/CD, and other items.}
+        \resumeItem{Operated original pre-revenue prototype applications in a single region, as an individual contributor.}
+        \resumeItem{Implemented a canary blue/green version experimentation system that allows software versions to be transparently deployed to individually selected customers, using NGINX Kubernetes ingress and host aliases.}
+        \resumeItem{Designed and contributed to build and test CI/CD infrastructure using GitHub Actions and Argo that replaced a Jenkins legacy infrastructure. Increased build, test, and deployment frequency by over 20x and reduced run times by 50\% or more.}
+        \resumeItem{Led troubleshooting and participated in primary on-call rotation for customer outages and performance incidents involving a wide variety of infrastructure in both customer and coalesce.io environments.}
+        \resumeItem{Scaled development and production infrastructure sites to 12 production regions and Kubernetes clusters across AWS, Azure, and Google Cloud Platform, with 36 availability zones, 20 managed application deployments, and tens of thousands of application components.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Product Marketing Lead, Aspen Mesh}{October 2020 -- June 2021}
+      {F5 Networks}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed competitive analyses and product positioning for Aspen Mesh, a Kubernetes service mesh based on Istio.}
+        \resumeItem{Migrated document collateral into Wordpress-based website and knowledge center for improved search engine performance and user experience.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager (Hosted Data Storage)}{June 2019 -- October 2020}
+      {Faction}{Denver, CO}
+      \resumeItemListStart
+        \resumeItem{Launched Cloud Control Volumes multi-cloud attached data storage product lines.}
+        \resumeItem{Led product development for a hosted data storage platform for unstructured data storage and analysis.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager (Service Providers)}{April 2018 -- February 2019}
+      {Automox}{Boulder, CO}
+      \resumeItemListStart
+        \resumeItem{Provided technical onboarding for the first service provider customer, NTT Data, into our SaaS platform and API.}
+        \resumeItem{Created integrations for service provider customers to add hosted automatic software patching to their own product portfolios.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager (Partner Integrations, SDKs, and APIs)}{February 2016 -- January 2017}
+      {NetApp (via SolidFire acquisition)}{Boulder, CO}
+      \resumeItemListStart
+        \resumeItem{Managed ecosystem products within the NetApp/SolidFire product portfolio, including onshoring of SolidFire VMware vCenter Plugin development.}
+        \resumeItem{Expanded SolidFire SDK products to include .NET, Python, and Java language coverage for the SolidFire API.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager (Partner Integrations, SDKs, and APIs)}{May 2015 -- February 2016}
+      {SolidFire}{Boulder, CO}
+      \resumeItemListStart
+        \resumeItem{Introduced a Java SDK for the SolidFire JSON-RPC over HTTPS API.}
+        \resumeItem{Led development for a CLI toolkit for the SolidFire data storage system.}
+        \resumeItem{SolidFire was acquired by NetApp in early 2016 for \$870M.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Technical Marketing Engineer}{June 2012 -- May 2015}
+      {SolidFire}{Boulder, CO}
+      \resumeItemListStart
+        \resumeItem{Produced technical marketing, internal hardware \& software component prototyping, and proof-of-concept demos using the Linux-based SolidFire storage system appliance.}
+        \resumeItem{Developed a reference architecture for high-density virtualization (500+ VMs/node) in OpenStack built using the Canonical/Ubuntu Linux OpenStack distribution, and the SolidFire storage system.}
+        \resumeItem{Participated in prototyping and initial release development of block-to-object backup functions that supported iSCSI volume data backup to S3-compatible object storage.}
+        \resumeItem{Developed assorted Python automation scripts, and a statsd/Grafana based storage performance metrics display.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Resume} $|$ \emph{Git, LaTeX, MacTeX/TeX Live, LaTeX Workshop}}{June 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Created this resume using a permissive-license (MIT) LaTeX template.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Postking (postking.com)} $|$ \emph{Rails, GCP, Kubernetes, Docker, Anthropic Claude}}{October 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Created a tool to create AI-powered link previews for any URL on the internet.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Ruby, JavaScript} \\
+     \textbf{Frameworks}{: FastAPI, Rails, Node.js} \\
+     \textbf{Tools}{: Git, Docker, Terraform, Kubernetes, Google Cloud Platform, AWS, Azure, GitHub, GitHub Actions, Jenkins, Prometheus, Datadog, VS Code, Cursor} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
